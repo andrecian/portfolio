@@ -22,32 +22,21 @@
   background: #00b894;
   color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
+  padding: 12px 20px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.3s;
   z-index: 999;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #eee;
+#modo-btn:hover {
+  transform: scale(1.05);
+  background-color: #019875;
 }
 
-body.dark-mode .container,
-body.dark-mode .projeto {
-  background: #1e1e1e;
-  color: #ccc;
-}
-
-body.dark-mode a {
-  color: #00cec9;
-}
-
-body.dark-mode #modo-btn {
-  background: #636e72;
-}
 
 }
 
