@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - André Filipe</title>
  <style>
+    .projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.projeto {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+}
+
+.projeto h3 {
+  margin-top: 0;
+  color: #1f2937;
+}
+
+.projeto a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #00b894;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.projeto a:hover {
+  background: #019875;
+}
+
     body {
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
@@ -72,13 +111,21 @@ h1 {
 
 
     <div class="container">
-        <h2>Projetos</h2>
-        <ul>
-<li><strong>Script de Backup Automatizado</strong>: Script em Bash que cria backups com data e hora - <a href='#' target='_blank'>Ver projeto</a></li><li><strong>Gerador de Portfólio</strong>: Script Python que cria sites automaticamente com HTML - <a href='#' target='_blank'>Ver projeto</a></li>
-        </ul>
+       <h2>Projetos</h2>
+<div class="projetos">
+  <div class="projeto">
+    <h3>Script de Backup Automatizado</h3>
+    <p>Script em Bash que gera backups com data e hora de forma automática.</p>
+    <a href="#" target="_blank">Ver projeto</a>
+  </div>
 
-        <h2>Links</h2>
-        <ul>
+  <div class="projeto">
+    <h3>Gerador de Portfólio</h3>
+    <p>Script Python que cria um site completo com nome, projetos e links personalizados.</p>
+    <a href="#" target="_blank">Ver projeto</a>
+  </div>
+</div>
+
 <li><a href='https://github.com/andrecian' target='_blank'>GitHub</a></li><li><a href='www.linkedin.com/in/andré-filipe-79a4ab377' target='_blank'>LinkedIn</a></li><li><a href='https://seusite.github.io' target='_blank'>Portfólio</a></li><li><a href='mailto:seuemail@exemplo.com' target='_blank'>E-mail</a></li>
         </ul>
     </div>
