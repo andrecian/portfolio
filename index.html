@@ -11,6 +11,44 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 20px;
+  body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#modo-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #00b894;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .container,
+body.dark-mode .projeto {
+  background: #1e1e1e;
+  color: #ccc;
+}
+
+body.dark-mode a {
+  color: #00cec9;
+}
+
+body.dark-mode #modo-btn {
+  background: #636e72;
+}
+
 }
 
 .projeto {
@@ -94,8 +132,15 @@ h1 {
 </style>
 
 </head>
+<script>
+  const botaoModo = document.getElementById('modo-btn');
+  botaoModo.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
 <body>
   <body>
+    <button id="modo-btn">🌙 Alternar Modo</button>
    <header>
   <h1>André Filipe</h1>
   <p class="descricao">DevOps em formação | Automação e scripts visuais</p>
